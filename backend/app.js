@@ -26,7 +26,7 @@ app.use('/api/v1/', user);
 
 // use static index from frontend
 app.use(express.static(path.join(__dirname, "../frontend/build")));
-app.get("*", (req, res) =>{
+app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
 });
 
